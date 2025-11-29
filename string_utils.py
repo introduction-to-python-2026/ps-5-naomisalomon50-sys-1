@@ -1,6 +1,3 @@
-
-
-
 def split_before_each_uppercases(formula):
   if len(formula) == 0:
     return []
