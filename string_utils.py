@@ -15,7 +15,7 @@ def split_before_each_uppercases(formula):
     split_formula.append(formula[start:])
     return split_formula
 
-def split_at_first_digit(formula):
+def split_at_digit(formula):
   digit_location = 1
   for char in formula[1:]:
     if char.isdigit():
@@ -37,7 +37,7 @@ def count_atoms_in_molecule(molecular_formula):
     formula_dic = {}
 
     for atom in split_before_each_uppercases(molecular_formula):
-        atom_name, atom_count = split_at_first_digit(atom)
+        atom_name, atom_count = split_at_digit(atom)
 
         # Step 2: Update the dictionary with the atom name and count
         formula_dic[atom_name] = atom_count
