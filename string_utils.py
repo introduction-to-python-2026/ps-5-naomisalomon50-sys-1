@@ -29,15 +29,15 @@ def split_at_digit(formula):
     numbers_part = formula[digit_location:]
     return prefix, int(numbers_part)
 
-def count_atoms_in_molecule(molecular_formula):
+def count_atoms_in_molecule(molecule):
     """Takes a molecular formula (string) and returns a dictionary of atom counts.
     Example: 'H2O' → {'H': 2, 'O': 1}"""
 
     # Step 1: Initialize an empty dictionary to store atom counts
     formula_dic = {}
 
-    for atom in split_before_each_uppercases(molecular_formula):
-        atom_name, atom_count = split_at_digit(atom)
+    for atom in split_before_each_uppercases(formula):
+        atom_name, atom_count = split_at_digit(formula)
 
         # Step 2: Update the dictionary with the atom name and count
         formula_dic[atom_name] = atom_count
