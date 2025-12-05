@@ -1,7 +1,7 @@
 # Add the import statements for functions from string_utils.py and equation_utils.py here
 from sympy import solve as sympy_solve
-from string_utils import count_atoms_in_reaction, parse_chemical_reaction
-from equation_utils import build_equations, my_solve
+from string_utils import parse_chemical_reaction
+from equation_utils import build_equations, my_solve, count_atoms_in_reaction
 
 def balance_reaction(reaction): #"Fe2O3 + H2 -> Fe + H2O"
 
