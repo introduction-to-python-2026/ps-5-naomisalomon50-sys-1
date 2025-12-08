@@ -16,7 +16,7 @@ def split_by_capitals(molecule):
     return split_formula
 
 
-def split_at_digit(atoms):
+def split_at_number(atoms):
   digit_location = 1
   for char in atoms[1:]:
     if char.isdigit():
@@ -40,7 +40,7 @@ def count_atoms_in_molecule(molecule):
     formula_dic = {}
 
     for atoms in split_by_capitals(molecule):
-        atom_name, atom_count = split_at_digit(atoms)
+        atom_name, atom_count = split_at_number(atoms)
 
         # Step 2: Update the dictionary with the atom name and count
         formula_dic[atom_name] = atom_count
