@@ -1,4 +1,4 @@
-def split_before_each_uppercases(molecule):
+def split_by_capitals(molecule):
   if len(molecule) == 0:
     return []
   else:
@@ -39,7 +39,7 @@ def count_atoms_in_molecule(molecule):
     # Step 1: Initialize an empty dictionary to store atom counts
     formula_dic = {}
 
-    for atoms in split_before_each_uppercases(molecule):
+    for atoms in split_by_capitals(molecule):
         atom_name, atom_count = split_at_digit(atoms)
 
         # Step 2: Update the dictionary with the atom name and count
